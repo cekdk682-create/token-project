@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Token - Android & IOS App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ios-page" id="mainPage">
+        <div class="ios-navbar">
+            <div></div>
+            <div class="navbar-title">Token</div>
+
+            <button class="nav-btn" onclick="navigateToSettings()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </button>
+        </div>
+
+        <div class="page-content" style="background-color: #000000">
+            <div class="image-shield">
+                <img class="icon" src="icon/icon.png">
+            </div>
+            <h1 style="font-size: 48px; margin-bottom: 10px;">Token</h1>
+            <h2>Get Gemini API</h2>
+            <p style="color: #8E8E93; margin-top: 8px;">Get Gemini API in one click!</p>
+            <button class="ios-btn" onclick="handleIosGenerate()">Get</button>
+
+            <div class="ios-result-group" id="iosResult">
+                <div class="group-label">Your API is</div>
+                <div class="ios-row">
+                    <div class="token-text" id="rawToken">null</div>
+                    <button class="ios-action-link" onclick="copyIosToken()">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ios-page" id="settingsPage">
+        <div class="ios-navbar">
+            <button class="nav-btn" onclick="navigateBackToMain()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                Back
+            </button>
+            <div class="navbar-title">Settings</div>
+            <div></div>
+        </div>
+
+        <div class="page-content" style="background-color: #000000;">
+            <h3>Other options</h3>
+            <p style="color: #8E8E93; margin-top: 8px; max-width: 280px;">You can select the model in the last updates...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
